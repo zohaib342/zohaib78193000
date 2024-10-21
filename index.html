@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todays menu</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        #A {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        #A img {
+            height: 300px;
+            width: 350px;
+        }
+
+        #A .card {
+            width: 80%;
+        }
+
+        .section {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 50px;
+        }
+
+        .card-title {
+            text-transform: capitalize;
+            font-weight: 500;
+            font-size: 21px;
+        }
+
+        .card-price {
+            text-align: right;
+            color: red;
+            font-size: 18px;
+        }
+
+        .card {
+            
+            border-radius: 5px;
+            
+        }
+
+
+
+        .card:hover {
+            transform: translateY(15px);
+            transition: all .1s;
+        }
+button{background-color: orange;}
+        h1 {
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+  font-weight: bold;margin-top: 20px;text-transform: capitalize;margin-bottom: 40px;
+}
+
+h1::before {
+  content: '';
+  position: absolute;
+  z-index: -2;
+  left: -50%;
+  top: -50%;
+  width: 200%;
+  height: 200%;
+  background-color: #399953;
+  background-repeat: no-repeat;
+  background-size: 50% 50%, 50% 50%;
+  background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+  background-image: linear-gradient(#399953, #399953), linear-gradient(#fbb300, #fbb300), linear-gradient(#d53e33, #d53e33), linear-gradient(#377af5, #377af5);
+  animation: rotate 4s linear infinite;
+}
+
+h1::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  left: 6px;
+  top: 6px;
+  width: calc(100% - 12px);
+  height: calc(100% - 12px);
+  background: white;
+  border-radius: 5px;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(1turn);
+  }
+  
+}
+
+        
+    </style>
+
+</head>
+
+<body">
+    <section class="section">
+        <h1>todays menu</h1>
+        <div class="btn-group" role="group" aria-label="Basic example">
+            <button type="button" class="btn btn-warning text-white" onclick="food()">All</button>
+            <button type="button" class="btn btn-warning text-white" onclick="breakfast()">breakfast</button>
+            <button type="button" class="btn btn-warning text-white" onclick="lunch()">lunch</button>
+            <button type="button" class="btn btn-warning text-white" onclick="dinner()">dinner</button>
+        </div>
+    </section>
+    <section id="A">
+        <!-- <div class="card" style="width: 30%;"> -->
+
+        </div>
+
+
+    </section>
+    <hr>
+    <script src="index.js"></script>
+    </body>
+
+</html>
